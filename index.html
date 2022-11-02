@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>IP tracker</title>
+  </head>
+  <body>
+    <div class="contaier">
+      <header>
+        <h1>IP Adress Tracker</h1>
+        <form action="">
+          <input type="text" name="ip-adress" id="ip-input" />
+          <button class="submit-button">></button>
+        </form>
+        <div id="info-container">
+          <ul>
+            <li>
+              <h6 class="info-header">ip adress</h6>
+              <p id="ip" class="info-content"></p>
+            </li>
+            <li>
+              <h6 class="info-header">location</h6>
+              <p id="location" class="info-content"></p>
+            </li>
+            <li>
+              <h6 class="info-header">timezone</h6>
+              <p id="timezone" class="info-content"></p>
+            </li>
+            <li>
+              <h6 class="info-header">isp</h6>
+              <p id="isp" class="info-content"></p>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div id="map"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

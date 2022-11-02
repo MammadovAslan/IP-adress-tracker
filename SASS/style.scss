@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+.contaier {
+  @media (min-width: 768px) {
+    margin: 3em;
+    height: 80vh;
+  }
+  height: 95vh;
+  box-shadow: -2px 5px 21px 1px rgba(45, 46, 51, 0.75);
+  #map {
+    z-index: 1;
+    height: 70%;
+    .leaflet-bottom,
+    .leaflet-top {
+      display: none;
+    }
+  }
+  header {
+    padding-top: 20px;
+    background: url("/images/pattern-bg.png");
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: rgb(243, 231, 231);
+    }
+    form {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      #ip-input,
+      .submit-button {
+        border: none;
+      }
+      #ip-input {
+        height: 30px;
+        width: 35vw;
+        border-radius: 8px 0 0 8px;
+        outline: none;
+        padding-left: 15px;
+      }
+      .submit-button {
+        height: 32px;
+        width: 32px;
+        border-left: none;
+        border-radius: 0 8px 8px 0;
+        color: #fff;
+        background-color: #111;
+        font-weight: 500;
+      }
+    }
+    #info-container {
+      z-index: 2;
+      width: 60%;
+      background-color: #fff;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 556px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        li {
+          &:not(:first-child) {
+            border-left: 1px solid grey;
+          }
+          @media (max-width: 556px) {
+            border: none !important;
+            gap: 10px;
+          }
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          padding: 0 15px;
+          gap: 15px;
+          .info-header,
+          .info-content {
+            @media (max-width: 556px) {
+              text-align: center;
+            }
+          }
+          .info-header {
+            text-transform: uppercase;
+            @media (min-width: 768px) {
+              align-self: flex-start;
+            }
+          }
+          .info-content {
+            font-weight: 600;
+            @media (max-width: 556px) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
